@@ -11,6 +11,9 @@
   --blue-color: #4070f4;
   --grey-color: #707070;
   --grey-color-light: #aaa;
+  --red-color-light: #ff0223;
+  --green-color: #1e8746;
+  --orange-color: #f89c0e;
 }
 body {
   background-color: #e7f2fd;
@@ -258,6 +261,8 @@ body.dark {
     left: -100%;
   }
 }
+
+
 /* Container */
 .container {
   transition: all 0.5s ease;
@@ -266,5 +271,82 @@ body.dark {
   ); /* Resta el ancho del sidebar (5rem) al 100% del ancho disponible */
   height: 100vh; /* Utiliza el 100% de la altura de la ventana */
   margin-left: 5rem; /* Para igualar el margen izquierdo al ancho del sidebar */
-  padding: 6rem 0 0 6rem; /*Para que el contenido no quede debajo de las barras de navegacion*/
+  padding: 6rem 0 0 12rem; /*Para que el contenido no quede debajo de las barras de navegacion*/
+  display: flex;
+  flex-direction: column;
+}
+
+.cars-info-container h2{
+  font-size: 2rem;
+}
+
+.cars-info-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.car-info-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 1.2rem;
+}
+
+.info-cards{
+  width: 30rem;
+  height: 15rem;
+  background-color: aquamarine;
+  border-radius: 6px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: var(--white-color);
+  padding: 1rem;
+  background-image: url(../img/car-rental.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: -6rem, 0;
+  position: relative;
+}
+
+.info-cards:nth-child(1){
+  background-color: var(--green-color);
+}
+
+.info-cards:nth-child(2){
+  background-color: var(--orange-color);
+}
+
+.info-cards .info-cards-title{
+  font-size: 2.2rem;
+  font-weight: 600;
+  position: absolute;
+  right: 1rem;
+  top: 1.7rem;
+}
+
+.info-cards .counter{
+  position: absolute;
+  font-weight: 800;
+  font-size: 4rem;
+  top: 45%;
+  right: 1rem;
+}
+
+.info-cards .info-cards-more_info{
+  position: absolute;
+  right: .5rem;
+  bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.table-rentals{
+  max-height: 45vh;
+  background-color: var(--white-color);
+  border-radius: 6px;
+  padding: 2rem;
+  margin-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
 }
