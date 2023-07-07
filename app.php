@@ -36,6 +36,20 @@ function obtenerRegistros($tabla)
     return $registros;
 }
 
+function obtenerRegistrosModelo($marca)
+{
+    $sql = "SELECT * FROM modelos_tmp WHERE identificador = '" . $marca . "'";
+    $result = ejecutarConsulta($sql);
+    $registros = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $registros[] = $row;
+        }
+    }
+    return $registros;
+}
+
+
 // Función para insertar un nuevo registro en una tabla
 function insertarRegistro($tabla, $datos)
 {
