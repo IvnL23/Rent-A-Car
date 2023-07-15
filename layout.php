@@ -46,7 +46,7 @@
                         <i class="bx bx-chevron-right arrow-left"></i>
                     </div>
                     <ul class="menu_items submenu">
-                        <a href="./brands" class="nav_link sublink">Marcas</a>
+                        <a href="./brands.php" class="nav_link sublink">Marcas</a>
                         <a href="./models.php?modelname=mercedes-benz" class="nav_link sublink">Modelos</a>
                         <a href="#" class="nav_link sublink">Tipos de vehículo</a>
                         <a href="#" class="nav_link sublink">Combustible</a>
